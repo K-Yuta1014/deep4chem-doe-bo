@@ -1,0 +1,21 @@
+name: chem_win
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy=1.26.4
+  - pandas
+  - scipy=1.13.1
+  - scikit-learn=1.6.1
+  - joblib=1.5.2
+  - matplotlib
+  - seaborn
+  - pillow
+  - rdkit
+  - mordred
+  - optuna
+  - py3dmol
+  - pip
+  - pip:
+      - torch
+      - torchvision

@@ -1,0 +1,65 @@
+---
+alwaysApply: true
+---
+
+# Research Project Rules
+
+## 目的 / Goal
+
+python_doe_kspub をベースに、
+deep4chemへ適用する。
+
+記述子の計算→EDA→予測モデルの構築→DoE(LightGBM+AD) or Bayesian Optimization(GPR+獲得関数)により発光波長が長波且つ量子収率が高い材料の候補を探索する
+
+Adapt python_doe_kspub logic for deep4chem.
+
+---
+
+## 元コードの扱い / Original Code Policy
+
+- 元コード構造はある程度維持する  
+Preserve original structure when practical.
+
+- 長すぎる・読みにくい部分のみ改善する  
+Refactor only long or unclear sections.
+
+- 全面再設計しない  
+Do not redesign the whole project.
+
+---
+
+## Notebookルール / Notebook Rules
+
+- セルは短く保つ  
+Keep cells short.
+
+- 可視化は簡潔に  
+Keep plots simple.
+
+- 中間確認用セルを適宜入れる  
+Include intermediate sanity-check cells.
+
+- コメントは教育的に書く  
+Use educational comments.
+
+---
+
+## 再現性 / Reproducibility
+
+- random seed固定  
+Always fix random seeds.
+
+---
+
+## 科学計算安全性 / Scientific Safety
+
+以下は明示依頼なしに変更禁止：
+
+- 目的変数定義  
+Target definitions
+
+- 単位  
+Units
+
+- 最適化目的  
+Optimization objectives
