@@ -50,8 +50,8 @@ BO の利点は、不確かさが大きい未探索領域（**探索**）と、�
 **PI（Probability of Improvement, 最大化）** — 学習データの現状最良値を上回る確率
 
 $$
-f^* = \max_{i \in \text{train}} y_i + \varepsilon \,\mathrm{std}(y_{\text{train}}), \qquad
-P_{\mathrm{PI}}(x) = P\bigl(Y(x) > f^*\bigr) = 1 - \Phi\!\left(\frac{f^* - \mu(x)}{\sigma(x)}\right)
+f^{*} = \max_{i \in \text{train}} y_i + \varepsilon \,\mathrm{std}(y_{\text{train}}), \qquad
+P_{\mathrm{PI}}(x) = P\bigl(Y(x) > f^{*}\bigr) = 1 - \Phi\!\left(\frac{f^{*} - \mu(x)}{\sigma(x)}\right)
 $$
 
 - $f^*$: 改善判定に使う閾値（best-so-far に緩和項を加えた値）
@@ -64,8 +64,8 @@ $$
 **PI（最小化）** — `settings` で `target_type = -1` のとき
 
 $$
-f^* = \min_{i \in \text{train}} y_i - \varepsilon \,\mathrm{std}(y_{\text{train}}), \qquad
-P_{\mathrm{PI}}(x) = P\bigl(Y(x) < f^*\bigr) = \Phi\!\left(\frac{f^* - \mu(x)}{\sigma(x)}\right)
+f^{*} = \min_{i \in \text{train}} y_i - \varepsilon \,\mathrm{std}(y_{\text{train}}), \qquad
+P_{\mathrm{PI}}(x) = P\bigl(Y(x) < f^{*}\bigr) = \Phi\!\left(\frac{f^{*} - \mu(x)}{\sigma(x)}\right)
 $$
 
 - $f^*$: 改善判定に使う閾値（best-so-far に緩和項を引いた値）
@@ -80,8 +80,7 @@ $$
 $$
 \begin{aligned}
 P_{\mathrm{PTR}}(x) &= P\bigl(y_{\mathrm{low}} \le Y(x) \le y_{\mathrm{high}}\bigr) \\
-&= \Phi\!\left(\frac{y_{\mathrm{high}} - \mu(x)}{\sigma(x)}\right)
- - \Phi\!\left(\frac{y_{\mathrm{low}} - \mu(x)}{\sigma(x)}\right)
+&= \Phi\!\left(\frac{y_{\mathrm{high}} - \mu(x)}{\sigma(x)}\right) - \Phi\!\left(\frac{y_{\mathrm{low}} - \mu(x)}{\sigma(x)}\right)
 \end{aligned}
 $$
 

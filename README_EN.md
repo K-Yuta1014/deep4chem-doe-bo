@@ -50,8 +50,8 @@ For each candidate $x$, GPR returns predictive mean $\mu(x)$ and standard deviat
 **PI (Probability of Improvement, maximization)** — probability of exceeding the current best observed value
 
 $$
-f^* = \max_{i \in \text{train}} y_i + \varepsilon \,\mathrm{std}(y_{\text{train}}), \qquad
-P_{\mathrm{PI}}(x) = P\bigl(Y(x) > f^*\bigr) = 1 - \Phi\!\left(\frac{f^* - \mu(x)}{\sigma(x)}\right)
+f^{*} = \max_{i \in \text{train}} y_i + \varepsilon \,\mathrm{std}(y_{\text{train}}), \qquad
+P_{\mathrm{PI}}(x) = P\bigl(Y(x) > f^{*}\bigr) = 1 - \Phi\!\left(\frac{f^{*} - \mu(x)}{\sigma(x)}\right)
 $$
 
 - $f^*$: threshold for judging improvement (best-so-far plus a relaxation term)
@@ -64,8 +64,8 @@ $$
 **PI (minimization)** — when `target_type = -1` in `settings`
 
 $$
-f^* = \min_{i \in \text{train}} y_i - \varepsilon \,\mathrm{std}(y_{\text{train}}), \qquad
-P_{\mathrm{PI}}(x) = P\bigl(Y(x) < f^*\bigr) = \Phi\!\left(\frac{f^* - \mu(x)}{\sigma(x)}\right)
+f^{*} = \min_{i \in \text{train}} y_i - \varepsilon \,\mathrm{std}(y_{\text{train}}), \qquad
+P_{\mathrm{PI}}(x) = P\bigl(Y(x) < f^{*}\bigr) = \Phi\!\left(\frac{f^{*} - \mu(x)}{\sigma(x)}\right)
 $$
 
 - $f^*$: threshold for judging improvement (best-so-far minus a relaxation term)
@@ -80,8 +80,7 @@ $$
 $$
 \begin{aligned}
 P_{\mathrm{PTR}}(x) &= P\bigl(y_{\mathrm{low}} \le Y(x) \le y_{\mathrm{high}}\bigr) \\
-&= \Phi\!\left(\frac{y_{\mathrm{high}} - \mu(x)}{\sigma(x)}\right)
- - \Phi\!\left(\frac{y_{\mathrm{low}} - \mu(x)}{\sigma(x)}\right)
+&= \Phi\!\left(\frac{y_{\mathrm{high}} - \mu(x)}{\sigma(x)}\right) - \Phi\!\left(\frac{y_{\mathrm{low}} - \mu(x)}{\sigma(x)}\right)
 \end{aligned}
 $$
 
