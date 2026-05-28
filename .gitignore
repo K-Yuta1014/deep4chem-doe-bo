@@ -1,8 +1,14 @@
 __pycache__/
 *.pyc
 
+.cursor/
+*.pptx
+~$*.pptx
+
 data/raw/
 outputs/
 *.pkl
 *.joblib
 *.npy
+
+.vscode/
