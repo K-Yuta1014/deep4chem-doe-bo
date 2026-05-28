@@ -2,6 +2,9 @@ __pycache__/
 *.pyc
 
 .cursor/
+AGENTS.md
+src/
+
 *.pptx
 ~$*.pptx
 
