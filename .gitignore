@@ -8,10 +8,12 @@ src/
 *.pptx
 ~$*.pptx
 
-data/raw/
-outputs/
 *.pkl
 *.joblib
 *.npy
 
 .vscode/
+
+notebook/outputs/descriptors/mordred_2d/
+notebook/outputs/descriptors/mordred_3d/
+notebook/outputs/descriptors/fp/

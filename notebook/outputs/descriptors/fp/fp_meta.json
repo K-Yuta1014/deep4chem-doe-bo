@@ -1,0 +1,6 @@
+{
+  "type": "Morgan",
+  "radius": 2,
+  "fpSize": 2048,
+  "columns_prefix": "FP_"
+}
